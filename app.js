@@ -10,7 +10,7 @@ btn.addEventListener("click", () => {
 		.then((data) => {
 			sum.innerHTML = "";
 			data.results.forEach((item) => {
-				const newElement = document.createElement("h5");
+				const newElement = document.createElement("h4");
 				newElement.textContent = item.trackName;
 				sum.appendChild(newElement);
 			});
