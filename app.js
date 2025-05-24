@@ -6,8 +6,8 @@ fetch(`https://itunes.apple.com/search?term=${encodeURIComponent(query)}`)
 	.then((display) => console.log(display))
 	.catch((error) => console.error(error));
 
-/* const inp = document.getElementById("input");
+const inp = document.getElementById("input");
 const btn = document.getElementById("button");
 const sum = document.getElementById("result");
 
-btn.addEventListener("click", (a) => {}); */
+btn.addEventListener("click", (a) => {});
