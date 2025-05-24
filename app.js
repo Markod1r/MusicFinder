@@ -1,7 +1,13 @@
-setInterval(myFunction, 500);
+const prompt = require("prompt-sync")();
 
-function myFunction() {
-	let d = new Date();
-	document.getElementById("demo").innerHTML =
-		d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
-}
+let query = prompt();
+fetch(`https://itunes.apple.com/search?term=${encodeURIComponent(query)}`)
+	.then((res) => res.json())
+	.then((display) => console.log(display))
+	.catch((error) => console.error(error));
+
+/* const inp = document.getElementById("input");
+const btn = document.getElementById("button");
+const sum = document.getElementById("result");
+
+btn.addEventListener("click", (a) => {}); */
