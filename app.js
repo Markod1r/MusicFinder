@@ -9,10 +9,15 @@ btn.addEventListener("click", () => {
 		.then((res) => res.json())
 		.then((data) => {
 			sum.innerHTML = "";
+			const judulUnik = new Set(); // Set untuk menyimpan judul unik
+
 			data.results.forEach((item) => {
-				const newElement = document.createElement("h4");
-				newElement.textContent = item.trackName;
-				sum.appendChild(newElement);
+				if (item.trackName && !judulUnik.has(item.trackName)) {
+					judulUnik.add(item.trackName); // Tambahkan ke set
+					const newElement = document.createElement("h4");
+					newElement.textContent = item.trackName;
+					sum.appendChild(newElement);
+				}
 			});
 		})
 		.catch(() => {
@@ -21,3 +26,4 @@ btn.addEventListener("click", () => {
 
 	input.value = "";
 });
+
