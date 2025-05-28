@@ -3,10 +3,9 @@ const btn = document.getElementById("button");
 const sum = document.getElementById("result");
 
 btn.addEventListener("click", () => {
-	const query = input.value;
 	result.innerHTML = "";
 
-	fetch(`https://itunes.apple.com/search?term=${encodeURIComponent(query)}`)
+	fetch(`https://itunes.apple.com/search?term=${encodeURIComponent(input.value)}`)
 		.then((res) => res.json())
 		.then((data) => {
 			sum.innerHTML = "";
