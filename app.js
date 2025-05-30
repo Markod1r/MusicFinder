@@ -23,6 +23,8 @@ btn.addEventListener("click", () => {
 				const newElement = document.createElement("h4");
 				newElement.textContent = item.trackName + " - " + item.artistName;
 				result.appendChild(newElement);
+				const newBr = document.createElement("br");
+				result.appendChild(newBr);
 			});
 		})
 		.catch(() => {
