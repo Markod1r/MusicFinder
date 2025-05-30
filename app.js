@@ -17,6 +17,9 @@ btn.addEventListener("click", () => {
 		.then((data) => {
 			sum.innerHTML = "";
 			data.results.forEach((item) => {
+				const newImg = document.createElement("img");
+				newImg.src = item.artworkUrl100;
+				result.appendChild(newImg);
 				const newElement = document.createElement("h4");
 				newElement.textContent = item.trackName + " - " + item.artistName;
 				result.appendChild(newElement);
