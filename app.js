@@ -21,7 +21,7 @@ btn.addEventListener("click", () => {
 				newImg.src = item.artworkUrl100;
 
 				const newElement = document.createElement("h4");
-				newElement.textContent =item.trackName + " - " + item.artistName;
+				newElement.textContent = item.trackName + " - " + item.artistName;
 				newElement.classList.add("song-title");
 
 				const parent = document.createElement("div");
