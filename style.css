@@ -53,7 +53,7 @@ body {
 	font-weight: bold;
 	cursor: pointer;
 	box-shadow: 0 2px 8px rgba(69, 196, 176, 0.3);
-	transition:transform 0.15s, box-shadow 0.3s;
+	transition: transform 0.15s, box-shadow 0.3s;
 }
 
 #button:hover {
