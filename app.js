@@ -19,12 +19,17 @@ btn.addEventListener("click", () => {
 			data.results.forEach((item) => {
 				const newImg = document.createElement("img");
 				newImg.src = item.artworkUrl100;
-				result.appendChild(newImg);
+
 				const newElement = document.createElement("h4");
 				newElement.textContent = item.trackName + " - " + item.artistName;
-				result.appendChild(newElement);
-				const newBr = document.createElement("br");
-				result.appendChild(newBr);
+				newElement.classList.add("song-title");
+
+				const parent = document.createElement("div");
+				parent.classList.add("song-item");
+
+				parent.appendChild(newImg);
+				parent.appendChild(newElement);
+				result.appendChild(parent);
 			});
 		})
 		.catch(() => {
