@@ -9,7 +9,7 @@ class Api {
 }
 
 btn.addEventListener("click", () => {
-	result.innerHTML = "";
+	sum.innerHTML = "";
 	const itunes = new Api(`https://itunes.apple.com/search?term=${encodeURIComponent(input.value)}`);
 
 	fetch(itunes.url)
