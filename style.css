@@ -5,7 +5,6 @@ body {
 	background: #08364F;
 	color: #D5D9C8;
 	display: flex;
-	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	min-height: 100vh;
@@ -29,7 +28,7 @@ body {
 	color: #D5D9C8;
 	font-size: 1rem;
 	outline: none;
-	transition: border-color 0.3s, box-shadow 0.3s, background 0.3s;
+	transition: border-color 0.3s, box-shadow 0.3s;
 }
 
 #input::placeholder {
@@ -39,7 +38,7 @@ body {
 
 #input:focus {
 	border-color: #B8C6D9;
-	background-color: #08364F;
+	background-color: #0b496a;
 	color: #D5D9C8;
 }
 
